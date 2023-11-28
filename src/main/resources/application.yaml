@@ -1,0 +1,26 @@
+debug: false
+management.endpoints.web.exposure.include: "*"
+
+logging:
+  level:
+    com.leojung.leo-project-board: debug
+    org.springframework.web.servlet: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/board
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    defer-datasource-initialization: true
+    hibernate.ddl-auto: update
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+  h2.console.enabled: true
+  sql.init.mode: always
