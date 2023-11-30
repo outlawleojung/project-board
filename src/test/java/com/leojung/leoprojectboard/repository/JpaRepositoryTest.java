@@ -19,7 +19,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DataJpaTest
 class JpaRepositoryTest {
 
-
     private final ArticleRepository articleRepository;
     private final ArticleCommentRepository articleCommentRepository;
 
